@@ -1,5 +1,7 @@
 import React from 'react';
 import "./style.css" 
+import TemporaryDrawer from './drawer';
+import AnchorTemporaryDrawer from './drawer';
 function Header() {
   return (
     <div className='navbar'>
@@ -9,6 +11,9 @@ function Header() {
         <a href='/'><p className='link'>Compare</p></a>
         <a href='/'><p className='link'>Watchlist</p></a>
         <a href='/'><p className='link'>Dashboard</p></a>
+      </div>
+      <div className='mobile-drawer'>
+        <AnchorTemporaryDrawer/>
       </div>
     </div>
   )
