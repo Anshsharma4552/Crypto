@@ -1,6 +1,8 @@
 import React from 'react'
 import "./style.css" 
 import Button from '../../Common/Button'
+import gradient from "../../../assets/gradient.png";
+import iphone from "../../../assets/iphone.png";
 function MainComponent() {
   return (
     <div className='flex-info'>
@@ -16,7 +18,10 @@ function MainComponent() {
                 <Button text={"Share"} outlined={true}/>
             </div>
         </div>
-        <div>phone</div>
+        <div className='phone-container'>
+            <img src={iphone} className='iphone'/>
+            <img src={gradient} className='gradient'/>
+        </div>
     </div>
   )
 }
