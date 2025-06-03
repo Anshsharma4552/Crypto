@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Common/Header'
+import axios from 'axios'
 import TabsComponent from '../components/Dashboard/Tabs'
 
 function DashboardPage() {
-  return (
+    const [coins,setCoins]=useState([])
+    useEffect(()=>{
+        // fetch('https://pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ids&names=names&symbols=symbols&category=category&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h')
+        axios
+        .get(
+           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+      )
+        .then((response)=>{
+            setCoins(response.data)
+        })
+        .catch((error)=>{
+            console.log(Error)
+        })
+    },[])
+    return (
     <div>
         <Header/>
-        <TabsComponent/>
+        <TabsComponent coins={coins}/>
     </div>
   )
 }
