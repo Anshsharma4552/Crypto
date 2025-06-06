@@ -4,7 +4,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 function Grid({coin}) {
   return (
-    <div className='grid-container'>
+    <div className={`grid-container ${coin.price_change_percentage_24h < 0 && "grid-container-red"}`}>
         <div className='info-flex'>
             <img src={coin.image} className='coin-logo'/>
             <div className='name-col'>

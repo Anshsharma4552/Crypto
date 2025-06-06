@@ -8,6 +8,14 @@
     flex-direction: column;
     justify-content: center;
 }
+.grid-container:hover{
+    border-color: var(--green);
+    transition: all 0.3s;
+}
+.grid-container-red:hover{
+    border-color: var(--red);
+    transition: all 0.3s;
+}
 .info-flex{
     display: flex;
     justify-content: flex-start;
