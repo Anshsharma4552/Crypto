@@ -62,6 +62,7 @@
     font-weight: 600;
     color: var(--green);
     font-size: 1.1rem;
+    min-width: 64px;
 }
 /* .price-chip:hover{
     background-color: var(--green);

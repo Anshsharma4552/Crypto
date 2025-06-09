@@ -19,3 +19,9 @@
     width: 3rem !important;
     margin-right: 2.5rem;
 }
+.td-right-align{
+    text-align: right;
+}
+.td-center-align{
+    text-align: center;
+}
