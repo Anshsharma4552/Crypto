@@ -10,6 +10,11 @@ function DashboardPage() {
     const onSearchChange=(e)=>{
         setSearch(e.target.value)
     }
+    var filteredCoins=coins.filter(
+        (item)=>
+            item.name.toLowerCase().includes(search.toLowerCase()) ||
+            item.symbol.toLowerCase().includes(search.toLowerCase())
+    )
     useEffect(()=>{
         // fetch('https://pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ids&names=names&symbols=symbols&category=category&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h')
         axios
@@ -26,8 +31,8 @@ function DashboardPage() {
     return (
     <div>
         <Header/>
-        <Search/>
-        <TabsComponent coins={coins}/>
+        <Search search={search} onSearchChange={onSearchChange}/>
+        <TabsComponent coins={filteredCoins}/>
     </div>
   )
 }
