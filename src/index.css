@@ -47,5 +47,8 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 
