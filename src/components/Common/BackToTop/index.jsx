@@ -4,8 +4,6 @@ import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 
 function BackToTop() {
     const [isVisible, setIsVisible] = useState(false);
-
-    // Function to handle scroll events
     const scrollFunction = () => {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             setIsVisible(true);
@@ -13,18 +11,12 @@ function BackToTop() {
             setIsVisible(false);
         }
     };
-
-    // Function to scroll to top
     const topFunction = () => {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0; 
     };
-
-    // Set up scroll event listener
     useEffect(() => {
         window.addEventListener('scroll', scrollFunction);
-        
-        // Cleanup function to remove event listener
         return () => {
             window.removeEventListener('scroll', scrollFunction);
         };

@@ -50,5 +50,13 @@ img {
 html{
   scroll-behavior: smooth;
 }
+.grey-wrapper{
+  display: block;
+  width: 90%;
+  background-color: var(--darkgray);
+  margin: 1.5rem auto;
+  border-radius: 0.8rem;
+  padding: 0rem 0.5rem;
+}
 
 
