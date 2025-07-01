@@ -5,6 +5,7 @@ import Header from '../components/Common/Header'
 import Loader from '../components/Common/Loader'
 import { coinObject } from '../functions/convertObject'
 import List from '../components/Dashboard/List'
+import CoinInfo from '../components/Coin/Coininfo'
 
 function CoinPage() {
     const { id } = useParams()
@@ -33,6 +34,7 @@ function CoinPage() {
         <div className='grey-wrapper'>
             <List coin={coinData}/>
         </div>
+        <CoinInfo heading={coinData.name} desc={coinData.desc}/>
         </>}
     </div>
   )
