@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import "./style.css"
 function CoinInfo({heading,desc}) {
-    const shortDesc=desc.slice(0,189) + "<span style='color:var(--gray)'> Read More... </span>";
-    const longDesc=desc + "<span style='color:var(--gray)'> Read Less... </span>";;
+    const shortDesc=desc.slice(0,189) + "<p style='color:var(--blue)'> Read More.. </p>";
+    const longDesc=desc + "<p style='color:var(--blue)'> Read Less.. </p>";;
     const [flag,setFlag]=useState(false)
   return (
     <div className='grey-wrapper'>

@@ -1,4 +1,3 @@
-import { symbol } from "framer-motion/client"
 
 export const coinObject=(setState,data)=>{
     setState({
