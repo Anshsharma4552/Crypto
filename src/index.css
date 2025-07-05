@@ -60,7 +60,8 @@ html{
 }
 .coins-days-flex{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: 1.5rem;
+  gap: 2rem;
 }

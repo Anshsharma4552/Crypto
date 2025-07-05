@@ -3,7 +3,7 @@ import { get100Coins } from '../../../functions/get100coin'
 import Select from "@mui/material/Select"
 import MenuItem  from '@mui/material/MenuItem'
 import "./styles.css"
-function SelectCoins({cryto1,cryto2,setCrypto1,setCrypto2}) {
+function SelectCoins({cryto1,cryto2,handleCoinChange}) {
     const [allCoins,setAllCoins]=useState([])
     const styles={
         height: "2.5rem",
@@ -19,14 +19,6 @@ function SelectCoins({cryto1,cryto2,setCrypto1,setCrypto2}) {
               borderColor: "#3a80e9",
             },
           },
-    }
-    const handleCoinChange=(event,isCoin2)=>{
-        if(isCoin2){
-            setCrypto2(event.target.value)
-        }
-        else{
-            setCrypto1(event.target.value)
-        }
     }
     useEffect(()=>{
        getData()
