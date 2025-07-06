@@ -13,6 +13,7 @@ function ComparePage() {
     const [cryto2Data,setCrypto2Data]=useState()
     const[isLoading,setIsLoading]=useState(true)
     const [days,setDays]=useState(30)
+    const [priceType,setPricesType]=useState("prices")
 function handleDaysChange(event){
     setDays(event.target.value)
 }
@@ -45,43 +46,37 @@ async function getData(){
     }
 }
 const handleCoinChange= async (event,isCoin2)=>{
-        if(isCoin2){
-            setCrypto2(event.target.value)
-            try {
-                setIsLoading(true)
-                const data = await getCoinData(event.target.value)
-                if (data) {
-                coinObject(setCrypto2Data, data)
-                const prices = await getCoinPrices(event.target.value, days,"prices")
-                    if (prices && prices.length > 0) {
-                        settingChartData(setChartData, prices)
-                    }
-                }
-            } catch (error) {
-                        console.error('Error fetching data:', error)
-            } finally {
-                        setIsLoading(false)
-            }
-    }
-        else{
-            setCrypto1(event.target.value)
-             try {
-                setIsLoading(true)
-                const data = await getCoinData(event.target.value)
-                if (data) {
-                coinObject(setCrypto1Data, data)
-                const prices = await getCoinPrices(event.target.value, days,"prices")
-                    if (prices && prices.length > 0) {
-                        settingChartData(setChartData, prices)
-                    }
-                }
-            } catch (error) {
-                        console.error('Error fetching data:', error)
-            } finally {
-                        setIsLoading(false)
-            }
+    if(isCoin2){
+        setCrypto2(event.target.value)
+        try {
+            setIsLoading(true)
+            const data = await getCoinData(event.target.value)
+            coinObject(setCrypto2Data, data)    
+        } catch (error) {
+                    console.error('Error fetching data:', error)
+        } finally {
+            setIsLoading(false)
+        }
+}else{
+        setCrypto1(event.target.value)
+        try {
+            setIsLoading(true)
+            const data = await getCoinData(event.target.value)
+            coinObject(setCrypto1Data, data)
+        } catch (error) {
+                    console.error('Error fetching data:', error)
+        } finally {
+                    setIsLoading(false)
         }
     }
+    const prices1=await getCoinPrices(cryto1,days,priceType)
+    const prices2=await getCoinPrices(cryto2,days,priceType)
+    if (prices1 && prices1.length > 0 && prices2 && prices2.length > 0) {
+        // settingChartData(setChartData, prices)
+        console.log("Both fetched",prices1,prices2)
+        setIsLoading(false)
+    }
+}
   return (
     <div>
         <Header />
