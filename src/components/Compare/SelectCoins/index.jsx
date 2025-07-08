@@ -3,7 +3,7 @@ import { get100Coins } from '../../../functions/get100coin'
 import Select from "@mui/material/Select"
 import MenuItem  from '@mui/material/MenuItem'
 import "./styles.css"
-function SelectCoins({cryto1,cryto2,handleCoinChange}) {
+function SelectCoins({crypto1,crypto2,handleCoinChange}) {
     const [allCoins,setAllCoins]=useState([])
     const styles={
         height: "2.5rem",
@@ -32,7 +32,7 @@ function SelectCoins({cryto1,cryto2,handleCoinChange}) {
         <p>Crypto 1</p>
         <Select
         sx={styles}
-          value={cryto1}
+          value={crypto1}
           label="Crypto 1"
           onChange={(event)=>handleCoinChange(event,false)}
         >
@@ -43,7 +43,7 @@ function SelectCoins({cryto1,cryto2,handleCoinChange}) {
         <p>Crypto 2</p>
         <Select
         sx={styles}
-          value={cryto2}
+          value={crypto2}
           label="Crypto 2"
           onChange={(event)=>handleCoinChange(event,true)}
         >
