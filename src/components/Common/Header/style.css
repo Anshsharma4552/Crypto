@@ -1,52 +1,73 @@
-.navbar{
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 3rem;
-    background-color:var(--black);
-    z-index: 100;
+:root {
+  --black: #0d1117;         /* Dark navy */
+  --blue: #3b82f6;          /* Vivid blue */
+  --gray: #8b949e;          /* Soft gray */
+  --white: #f0f6fc;         /* Light white */
+  --hover: #60a5fa;         /* Lighter blue on hover */
 }
-.logo{
-    font-size: 1.2rem;
-}
-.links{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.5rem;
-}
-.link{
-    color: var(--gray);
-    font-weight: 600;
-    font-size: 1rem;
-}
-.link:hover{
-    color: var(--white);
-    transition: all 0.3s;
-}
-.mobile-drawer{
-    display: none;
-}
-@media only screen and (max-width:800px){
-    .navbar{
-        padding: 1.5rem;
-    }
-    .logo{
-        font-size: 1rem;
-    }
-    .links{
-        display: none;
-    }
-    .mobile-drawer{
-        display: block;
-    }
-}
-.drawer-div{
-    width: 40vh;
-    background-color: var(--black);
-    height: 100vh;
-    padding: 1.5rem;
 
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background-color: var(--black);
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); /* subtle shadow */
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--hover);
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    padding: 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .mobile-drawer {
+    display: block;
+  }
+}
+
+.drawer-div {
+  width: 40vh;
+  background-color: var(--black);
+  height: 100vh;
+  padding: 1.5rem;
 }
