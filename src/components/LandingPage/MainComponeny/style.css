@@ -125,7 +125,7 @@
 .counter-grid {
   display: flex;
   justify-content: flex-start; /* align left */
-  gap: 115px; /* controls the space between boxes */
+  gap: 111px; /* controls the space between boxes */
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0 auto;
