@@ -53,7 +53,7 @@ function ComparePage() {
                 console.error('No data2 received for:', crypto2)
             }
             
-            // Optional: Fetch prices
+
             if(data1 && data2){
                 console.log('Fetching prices...')
                 const prices1 = await getCoinPrices(crypto1, days, priceType)
@@ -82,7 +82,6 @@ function ComparePage() {
                 console.log('Changing crypto2 to:', newCoinValue)
                 setCrypto2(newCoinValue)
                 
-                // Fetch new coin2 data
                 const data2 = await getCoinData(newCoinValue)
                 console.log('New data2 received:', data2)
                 
@@ -97,7 +96,6 @@ function ComparePage() {
                 console.log('Changing crypto1 to:', newCoinValue)
                 setCrypto1(newCoinValue)
                 
-                // Fetch new coin1 data
                 const data1 = await getCoinData(newCoinValue)
                 console.log('New data1 received:', data1)
                 
@@ -116,7 +114,6 @@ function ComparePage() {
         }
     }
 
-    // Debug: Log current state
     console.log('Current render state:')
     console.log('- isLoading:', isLoading)
     console.log('- crypto1:', crypto1, 'crypto1Data:', crypto1Data)
