@@ -4,28 +4,33 @@
     align-items: flex-start;
     padding: 0.5rem 3rem;
 }
-.track-crypto-heading,
-.real-time-heading{
+
+.track-crypto-heading, .real-time-heading{
     font-size: 6.5rem;
     margin: 0;
 }
+
 .track-crypto-heading{
     color: var(--white);
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--white);
 }
+
 .real-time-heading{
     color: var(--blue);
 }
+
 .track-crypto-heading:hover{
     color: var(--black);
     -webkit-text-stroke-color: var(--white);
     transition: all 0.3s;
 }
+
 .info-text{
     font-size: 1rem;
     color: var(--gray);
 }
+
 .btn-flex{
     display: flex;
     justify-content: flex-start;
@@ -33,11 +38,13 @@
     gap: 1.5rem;
     margin-top: 2rem;
 }
+
 .phone-container{
     width: 50%;
     position: relative;
     padding: 1rem;
 }
+
 .iphone{
     position: absolute;
     z-index: 100;
@@ -45,6 +52,7 @@
     width: 50%;
     right: 0;
 }
+
 .gradient{
     position: absolute;
     min-width: 250px;
@@ -52,113 +60,160 @@
     top: 6.5rem;
     right: 0;
 }
-@media only screen and (max-width:1250px){
-    .track-crypto-heading,
-    .real-time-heading{
-        font-size: 5rem;
-        margin: 0;
-    }
-}
 
-@media only screen and (max-width:1000px){
-    .iphone{
-    min-width: 250px;
-    width: 50%;
-    }
-    .gradient{
-    min-width: 200px;
-    top: 6rem;
-    }
-}
-
-@media only screen and (max-width:800px){
-    .flex-info{
-        flex-direction: column;
-
-    }
-    .phone-container{
-        margin: auto;
-        display: block;
-        margin-top: 3rem;
-    }
-    .iphone{
-        left: -2rem;
-    }
-    .gradient{
-        left: 15%;
-    }
-    .left-component{
-        width: 100%;
-    }
-    .track-crypto-heading,.real-time-heading{
-        font-size: 3rem;
-        text-align: center;
-    }
-    .track-crypto-heading{
-         -webkit-text-stroke-width: 1px;
-    }
-    .info-text{
-        text-align: center;
-    }
-    .btn-flex{
-        justify-content: center;
-    }
-}
+/* Counter section - only shows on laptop sizes */
 .counter-subtitle{
     color: var(--blue);
     font-size: 1.4rem;
     margin-bottom: 3rem;
     margin-left: 2rem;
-    
 }
+
 .number-counter-section {
-  position: fixed;
-  bottom: 70px;
-  left: 0;
-  right: 0;
-  color: #ffffff;
-  padding: 10px 20px;
-  font-family: 'Poppins', sans-serif;
-  z-index: 9999; /* above other content */
+    position: fixed;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    z-index: 9999;
 }
 
 .counter-grid {
-  display: flex;
-  justify-content: flex-start; /* align left */
-  gap: 111px; /* controls the space between boxes */
-  flex-wrap: nowrap;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow-x: auto;
-  margin-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 111px;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    margin-left: 2rem;
 }
 
 .counter-box {
-  flex: 0 0 auto;
-  border-radius: 14px;
-  padding: 10px 18px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: default;
+    flex: 0 0 auto;
+    border-radius: 14px;
+    padding: 10px 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
 }
 
 .counter-box:hover {
-  transform: translateY(-4px) scale(1.05);
+    transform: translateY(-4px) scale(1.05);
 }
 
 .counter-number {
-  font-size: 1.8rem;
-  font-weight: 750;
-  margin: 0 0 6px 0;
-  white-space: nowrap; /* keep number on one line */
+    font-size: 1.8rem;
+    font-weight: 750;
+    margin: 0 0 6px 0;
+    white-space: nowrap;
 }
 
 .counter-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #ffffff; /* pure white */
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
-  user-select: none;
-  white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    user-select: none;
+    white-space: nowrap;
 }
 
+/* Responsive Media Queries - Main Content Only */
+@media only screen and (max-width: 1250px) {
+    .track-crypto-heading,
+    .real-time-heading {
+        font-size: 5rem;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .iphone {
+        min-width: 250px;
+        width: 50%;
+    }
+    
+    .gradient {
+        min-width: 200px;
+        top: 6rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .flex-info {
+        flex-direction: column;
+    }
+    
+    .phone-container {
+        margin: auto;
+        display: block;
+        margin-top: 3rem;
+    }
+    
+    .iphone {
+        left: -2rem;
+    }
+    
+    .gradient {
+        left: 15%;
+    }
+    
+    .left-component {
+        width: 100%;
+    }
+    
+    .track-crypto-heading, .real-time-heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .track-crypto-heading {
+        -webkit-text-stroke-width: 1px;
+    }
+    
+    .info-text {
+        text-align: center;
+    }
+    
+    .btn-flex {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flex-info {
+        padding: 0.5rem 1rem;
+    }
+    
+    .track-crypto-heading, .real-time-heading {
+        font-size: 2.5rem;
+    }
+    
+    .info-text {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .btn-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .track-crypto-heading, .real-time-heading {
+        font-size: 2rem;
+    }
+    
+    .iphone {
+        min-width: 200px;
+        left: -1rem;
+    }
+    
+    .gradient {
+        min-width: 150px;
+        left: 10%;
+    }
+}
